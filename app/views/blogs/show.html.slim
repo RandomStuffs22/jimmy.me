@@ -9,7 +9,6 @@
     .post_summary
       ul.clearfix
         li.posted_at= @blog.created_at.strftime("%F %T")
-        li 
-          a href='#this' Ruby
-        li 
-          a href='#this' Rails
+        - @blog.tags.each do |tag|
+          li 
+            a href="#{tag_path(tag)}"= tag

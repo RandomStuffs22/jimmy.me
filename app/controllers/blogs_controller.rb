@@ -1,9 +1,9 @@
 # coding: utf-8
 class BlogsController < ApplicationController
-  before_filter :require_login, :except => [:show, :index]
+  before_filter :require_login, :except => [:show, :index, :find_all_by_tag]
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.desc('created_at')
     set_seo_meta
   end
 
@@ -42,6 +42,12 @@ class BlogsController < ApplicationController
     blog = Blog.find_by(:id => params[:id])
     blog.destroy
     redirect_to blogs_path
+  end
+
+  def find_all_by_tag
+    @blogs = Blog.desc('created_at').where(:tags => params[:tag])
+    set_seo_meta
+    render :action => :index
   end
 
 end

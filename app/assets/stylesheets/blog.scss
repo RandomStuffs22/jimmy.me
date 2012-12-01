@@ -47,6 +47,17 @@ $text-color: #666666;
     }    
   }
 
+  .post .read_on {
+    // color: $text-color;
+    margin-top: 20px;
+    p { 
+      a { 
+        background-color: #DDD; color: $text-color; 
+        padding: 5px 5px;
+      } 
+    }
+  }
+
 
   .new_post {
     padding: 10px 10px;
