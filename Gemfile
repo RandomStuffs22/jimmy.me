@@ -13,6 +13,12 @@ gem 'slim', :git => 'https://github.com/stonean/slim.git'
 # Paginate
 gem 'will_paginate', '~> 3.0.3'
 
+gem "settingslogic", "~> 2.0.6"
+
+# MarkDown
+gem 'redcarpet'
+gem "pygments.rb"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

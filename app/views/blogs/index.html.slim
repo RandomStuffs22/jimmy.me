@@ -1,0 +1,15 @@
+.blogs
+  - @blogs.each do |blog|
+    .post.clearfix
+      .post_title
+        a href=blog_path(blog.slug) = blog.title
+
+      .post_body= markdown(blog.content)
+
+      .post_summary
+        ul.clearfix
+          li.posted_at= blog.created_at.strftime("%F %T")
+          li 
+            a href='#this' Ruby
+          li 
+            a href='#this' Rails
