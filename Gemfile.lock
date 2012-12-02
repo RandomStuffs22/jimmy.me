@@ -5,6 +5,12 @@ GIT
     mongoid_colored_logger (0.1.1)
 
 GIT
+  remote: https://github.com/flyerhzm/chinese_pinyin.git
+  revision: 9aa24c351e4a107922852f0a81cb9d847f001f86
+  specs:
+    chinese_pinyin (0.4.1)
+
+GIT
   remote: https://github.com/stonean/slim.git
   revision: 632571e205ba5d0491605b513a7019f18c7e38ba
   specs:
@@ -181,6 +187,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  chinese_pinyin!
   chunky_png (= 1.2.5)
   coffee-rails (~> 3.2.1)
   factory_girl_rails

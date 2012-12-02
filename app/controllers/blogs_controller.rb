@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
   before_filter :require_login, :except => [:show, :index, :find_all_by_tag]
 
   def index
-    @blogs = Blog.desc('created_at')
+    @blogs = Blog.desc('created_at').paginate(:page => params[:page], :per_page => 10)
     set_seo_meta
   end
 
@@ -45,7 +45,7 @@ class BlogsController < ApplicationController
   end
 
   def find_all_by_tag
-    @blogs = Blog.desc('created_at').where(:tags => params[:tag])
+    @blogs = Blog.where(:tags => params[:tag]).desc('created_at').paginate(:page => params[:page], :per_page => 10)
     set_seo_meta
     render :action => :index
   end

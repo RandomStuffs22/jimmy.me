@@ -1,11 +1,7 @@
 $white: #FFF;
-$dark: #333333;
 $green: green;
-$red: #FF0000;
-$grey: #CCC;
-$light_grey: #999;
+$grey: #999;
 $text-color: #76838B;
-$w_grey: #E8E7E3;
 
 // Pagination
 .pagination_panel {
@@ -29,27 +25,26 @@ $w_grey: #E8E7E3;
 }
 
 .digg_pagination .disabled {
-  color: $text-color;
-  border: 1px solid $grey; 
+  color: $grey;
 }
 
 .digg_pagination .current {
   font-style: normal;
   font-weight: bold;
-  background: #468847;
-  color: $white;
-  border: 1px solid $green;
+  background: #F5F5F5;
+  color: $text-color;
+  border: 1px solid $grey;
 }
 
 .digg_pagination a {
   text-decoration: none;
-  color: #468847;
-  border: 1px solid #468847;
+  color: $grey;
+  border: 1px solid $grey;
 }
 
 .digg_pagination a:hover, .digg_pagination a:focus {
-  color: $green;
-  border: 1px solid $green;
+  color: #333;
+  border: 1px solid #333;
 }
 
 .digg_pagination .page_info {

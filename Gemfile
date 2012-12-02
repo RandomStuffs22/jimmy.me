@@ -19,6 +19,9 @@ gem "settingslogic", "~> 2.0.6"
 gem 'redcarpet'
 gem "pygments.rb"
 
+# Chinese to Pinyin
+gem 'chinese_pinyin', :git => 'https://github.com/flyerhzm/chinese_pinyin.git'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

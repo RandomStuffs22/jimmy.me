@@ -16,4 +16,7 @@
           - blog.tags.each do |tag|
             li 
               a href="#{tag_path(tag)}"= tag
+              
+  .pagination_panel
+    = will_paginate(@blogs, :class => 'digg_pagination')              
 
